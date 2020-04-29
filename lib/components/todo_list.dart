@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertodo/components/todo_edit.dart';
 
 class TodoList extends StatefulWidget {
   @override
@@ -14,7 +15,8 @@ class _TodoListState extends State<TodoList> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("Hoge");
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => TodoEdit()));
         },
         child: Container(
           child: Icon(Icons.add),
